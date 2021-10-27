@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\WalletController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,6 +19,8 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/', function () {
         return view('welcome');
     });
+
+    Route::resource('wallet', WalletController::class);
 });
 
 Auth::routes();

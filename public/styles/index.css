@@ -1437,16 +1437,16 @@ button {
 }
 
 .eye-icon {
-    content: url('public/assetssets/svg/eye.svg');
+    content: url('/assets/svg/eye.svg');
     transition: .3s;
 }
 
 .eye-x-icon {
-    content: url('public/assetssets/svg/eye-x.svg') !important;
+    content: url('/assets/svg/eye-x.svg') !important;
 }
 
 .telegram-icon {
-    content: url('public/assetssets/svg/telegram.svg');
+    content: url('/assets/svg/telegram.svg');
 }
 
 /* Cursors */
@@ -1488,7 +1488,7 @@ button {
 }
 
 .checkbox-group .checked\:check-svg {
-    content: url('public/assetssets/svg/check.svg');
+    content: url('/assets/svg/check.svg');
     width: 100%;
     height: 100%;
     transform: scale(0);
