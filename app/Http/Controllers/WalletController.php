@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Wallet;
+use App\Models\WalletsHistory;
 use Illuminate\Http\Request;
 
 class WalletController extends Controller
@@ -67,6 +68,12 @@ class WalletController extends Controller
         $wallet = Wallet::find($id);
         $wallet['balance'] = ($wallet['balance'] + $request['balance']);
         $wallet->save();
+
+        $history = new WalletsHistory();
+        $history['user_id'] = auth()->user()['id'];
+        $history['amount'] = $request['balance'];
+        $history->save();
+
 
         return view('wallet.index');
     }
